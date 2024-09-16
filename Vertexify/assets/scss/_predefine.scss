@@ -59,12 +59,7 @@ body {
 	background-color: #fff;     
 	-moz-osx-font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased; 
-	.container {
-		max-width: 1240px;
-	}
-	.split-line {
-		overflow: hidden;
-	}
+	
 	.row {
 		--bs-gutter-x: 32px;
 	}
@@ -87,6 +82,15 @@ body {
 		background: var(--vt-base-color-1);
 	}
 }
+
+.home-1 , .home-2 , .home-3 {
+	.container {
+		max-width: 1240px;
+	}
+	.split-line {
+		overflow: hidden;
+	}
+} 
 
 body::-webkit-scrollbar {
 	width: 6px;

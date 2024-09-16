@@ -1,0 +1,110 @@
+/* 
+    vy-common-css-start
+*/
+:root {
+  --vy-clr-pr-1: #3533FF;
+  --vy-clr-gray-1: #DFE1E5;
+  --vy-clr-black-1: #000000;
+}
+
+.vy-home a:focus, .vy-home .button:focus {
+  text-decoration: none;
+  outline: none;
+}
+.vy-home a, .vy-home span {
+  display: inline-block;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: none;
+  transition: unset;
+  line-height: inherit;
+}
+.vy-home button {
+  border: none;
+  outline: none;
+}
+.vy-home a:focus,
+.vy-home a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.vy-home ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.vy-home ::-moz-selection {
+  background-color: #3065D0;
+  color: white;
+  text-shadow: none;
+}
+.vy-home ::-moz-selection {
+  background-color: #3065D0;
+  color: white;
+  text-shadow: none;
+}
+.vy-home ::selection {
+  background-color: #3065D0;
+  color: white;
+  text-shadow: none;
+}
+.vy-home input::placeholder, .vy-home textarea::placeholder {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+.vy-home input:focus::placeholder, .vy-home textarea:focus::placeholder {
+  opacity: 0;
+}
+
+@media (min-width: 1300px) {
+  .container.vy-container-1 {
+    max-width: 1246px;
+  }
+}
+/* 
+    vy-common-css-end
+*/
+/* 
+    vy-components-start
+*/
+.vy-phone-btn {
+  font-family: var(--vt-body-font);
+  font-size: 14px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.vy-phone-btn .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--vy-clr-gray-1);
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+/* 
+    vy-components-end
+*/
+/* 
+    h4-header-start
+*/
+/* 
+    h4-header-end
+*/
+/* 
+    h4-hero-start
+*/
+/* 
+    h4-hero-end
+*/
+
+/*# sourceMappingURL=main.css.map */

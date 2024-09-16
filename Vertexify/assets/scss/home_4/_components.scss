@@ -1,0 +1,27 @@
+/* 
+    vy-components-start
+*/
+
+.vy-phone-btn {
+    font-family: var(--vt-body-font);
+    font-size: 14px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: var(--vy-clr-gray-1);
+        flex: 0 0 auto;
+        border-radius: 50%;
+    }
+}
+
+/* 
+    vy-components-end
+*/
