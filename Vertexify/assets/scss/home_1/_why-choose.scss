@@ -1,0 +1,160 @@
+.vt-why-choose-section {
+	margin: 0 auto;
+	overflow: hidden;
+	max-width: 1920px;
+}
+.vt-why-choose-content {
+	gap: 30px 72px;
+	@media #{$lg,$md,$sm,$xs} {
+		flex-wrap: wrap;
+		padding: 60px 15px;
+	}
+	&.dark_version {
+		background: linear-gradient(360deg, #101010 0%, #454545 100%);
+		.vt-why-choose-img {
+			max-height: 1024px;
+		}
+	}
+}
+.vt-why-choose-img {
+	width: 50%;
+	overflow: hidden;
+	max-height: 924px;
+	@media #{$lg,$md,$sm,$xs} {
+		width: 100%;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.vt-vertical-shape-2 {
+		left: auto;
+		right: 5px;
+		bottom: 0px;
+		width: 40px;
+		height: 100%;
+		display: flex;
+		span {
+			width: 6px;
+			height: 0%;
+			margin-bottom: 0;
+			margin-right: 6px;
+			background-color: #fff;
+			transition: all 700ms ease;
+			&:nth-child(2) {
+				width: 6px;
+				height: 0%;
+				margin-right: 10px;
+			}
+			&:nth-child(3) {
+				width: 6px;
+				height: 0%;
+			}
+		}
+		&.active {
+			span {
+				height: 100%;
+				transition-delay: 1300ms;
+				&:nth-child(2) {
+					height: 100%;
+					transition-delay: 1500ms;
+				}
+				&:nth-child(3) {
+					height: 100%;
+					transition-delay: 1800ms;
+				}
+			}
+		}
+	}
+}
+.vt-why-choose-text {
+	max-width: 540px;
+	@media #{$lg,$md,$sm,$xs} {
+		max-width: 100%;
+	}
+	&.dark_version {
+		.vt-section-title {
+			.subtitle {
+				color: #C9F7CA;
+				background: #C9F7CA29;
+				&:before,
+				&:after {
+					background-color: #C9F7CA;
+				}
+			}
+			.section_title {
+				color: #fff;
+			}
+		}
+		.vt-btn {
+			a {
+				border: 2px solid #C9F7CA;
+				background-color: transparent; 
+				&:before {
+					background-color: #C9F7CA;
+				}
+				&:hover {
+					color: #000;
+				}
+			}
+		}
+	}
+}
+.vt-why-choose-ft-item-area {
+	padding-top: 50px;
+}
+.vt-why-choose-ft-item {
+	gap: 20px 24px;
+	margin-bottom: 38px;
+	@media #{$xxs} {
+		flex-wrap: wrap;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	.item-icon {
+		svg {
+			path {
+				stroke-dasharray: 2500;
+				stroke-dashoffset: 0;
+			}
+		}
+	}
+	.item-text {
+		max-width: 470px;
+		@media #{$lg,$md,$sm,$xs} {
+			max-width: 100%;
+		}
+		h3 {
+			font-size: 23px;
+			font-weight: 500;
+			padding-bottom: 10px;
+			color: var(--vt-title-color);
+		}
+		p {
+			color: #454545;
+			font-size: 18px;
+		}
+	}
+	&:hover {
+		.item-icon {
+			svg {
+				path {
+					animation: SVGTX 8s ease;
+				}
+			}
+		}
+	}
+	&.dark_version {
+		.item-text {
+			h3 {
+				color: #fff;
+			}
+			p {
+				color: #fff;
+				opacity: .64;
+			}
+		}
+	}
+}

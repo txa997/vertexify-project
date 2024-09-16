@@ -1,0 +1,30 @@
+/*=========
+Font load
+===========*/
+:root {
+	--vt-gray: #E7E7E7;
+	--vt-body-color: #4F4F4F;
+	--vt-title-color: #101010;
+	--vt-heading: 'Test_Söhne_500';
+	--vt-body-font: 'Test_Söhne_400';
+	--vt-semibold: 'Test_Söhne_600';
+	--vt-base-color-1: #C9F7CA;
+	--vt-grandient-1: #DBF0FF;
+	--vt-grandient-2: #DFE2FF;
+	--vt-grandient-3: #F6DFFF;
+	--vt-gradient-color:  linear-gradient(90deg, var(--vt-grandient-1) 0%, var(--vt-grandient-2) 50%, var(--vt-grandient-3) 100%);
+	--cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
+    --cube-2: all .25s cubic-bezier(.645,.045,.355,1);
+  
+}
+// Responsive Variables
+$over:'(min-width: 1800px)';
+$xxxl: 'only screen and (min-width: 1600px) and (max-width: 1799px)';
+$xxl: 'only screen and (min-width: 1400px) and (max-width: 1599px)';
+$xl: 'only screen and (min-width: 1200px) and (max-width: 1399px)';
+$lg: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$xs:'(max-width: 767px)';
+$xxs:'(max-width: 480px)';
+$xxxs:'(max-width: 360px)';
