@@ -1,0 +1,97 @@
+/* 
+    vy-all-title-para-start
+*/
+
+/* subtitle */
+
+.vy-font-400 {
+    font-family: var(--vt-body-font);
+    color: var(--vy-clr-black-1);
+    text-transform: capitalize;
+    margin-bottom: 0px;
+
+    &:is(.has-clr-white) {
+        color: #fff;
+    }
+}
+
+.vy-subtitle-1 {
+    font-family: var(--vt-body-font);
+    text-transform: capitalize;
+    color: var(--vy-clr-black-1);
+    font-size: 15px;
+    line-height: 1.5;
+    display: inline-block;
+    border: 1px solid var(--vy-clr-gray-1);
+    padding: 2px 20px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+
+    &::after {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--vy-clr-black-1);
+        position: absolute;
+        left: 8px;
+        top: 12px;
+    }
+
+    &::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--vy-clr-black-1);
+        position: absolute;
+        right: 8px;
+        top: 12px;
+    }
+}
+
+/* scn-title */
+.vy-scn-title-1 {
+    font-family: var(--vt-heading);
+    text-transform: capitalize;
+    color: var(--vy-clr-black-1);
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+
+    &:is(.has-45) {
+        font-size: 45px;
+        line-height: 1.06;
+
+        @media #{$lg} {
+            font-size: 40px;
+        }
+
+        @media #{$md} {
+            font-size: 35px;
+        }
+
+        @media #{$xs} {
+            font-size: 25px;
+        }
+
+        @media #{$sm} {
+            font-size: 30px;
+        }
+    }
+}
+
+/* para-1 */
+.vy-para-1 {
+    font-family: var(--vt-body-font);
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--vy-clr-gray-2);
+    margin-bottom: 0;
+}
+
+/* 
+    vy-all-title-para-end
+*/

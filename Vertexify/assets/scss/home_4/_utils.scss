@@ -4,93 +4,145 @@
 
 :root {
     --vy-clr-pr-1: #3533FF;
-    --vy-clr-gray-1: #DFE1E5;
+
+
     --vy-clr-black-1: #000000;
+    --vy-clr-white-1: #ffffff;
+    --vy-clr-gray-1: #DFE1E5;
+    --vy-clr-gray-2: #5D5D5D;
   
 }
 
+/* Responsive Variables start */
+$over:'(min-width: 1800px)';
+$xxxl: 'only screen and (min-width: 1600px) and (max-width: 1799px)';
+$xxl: 'only screen and (min-width: 1400px) and (max-width: 1599px)';
+$xl: 'only screen and (min-width: 1200px) and (max-width: 1399px)';
+$lg: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$xs:'(max-width: 767px)';
+/* Responsive Variables end */
 
-.vy-home {
-    a:focus, .button:focus 
-    {
-        text-decoration: none;
-        outline: none;
-    }
-    a , span 
-    {
-        display: inline-block;
-        color: inherit;
+a:focus, .button:focus 
+{
+    text-decoration: none;
+    outline: none;
+}
+a , span 
+{
+    display: inline-block;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+    text-decoration: none;
+    transition: unset;
+    line-height: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+a:focus,
+a:hover
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+::-moz-selection {
+    background-color: #3065D0;
+    color: white;
+    text-shadow: none;
+}
+::-moz-selection {
+    background-color: #3065D0;
+    color: white;
+    text-shadow: none;
+}
+::selection {
+    background-color:#3065D0;
+    color: white;
+    text-shadow: none;
+}  
+
+input ,textarea {
+
+    &::placeholder {
         font-size: inherit;
-        font-family: inherit;
         font-weight: inherit;
-        text-transform: inherit;
-        text-decoration: none;
-        transition: unset;
-        line-height: inherit;
-    }
-
-    button {
-        border: none;
-        outline: none;
-    }
-
-    a:focus,
-    a:hover
-    {
         color: inherit;
-        text-decoration: none;
+        font-family: inherit;
     }
 
-    ul {
-        margin: 0px;
-        padding: 0px;
-        list-style: none;
-    }
+}
 
-    ::-moz-selection {
-        background-color: #3065D0;
-        color: white;
-        text-shadow: none;
-    }
-    ::-moz-selection {
-        background-color: #3065D0;
-        color: white;
-        text-shadow: none;
-    }
-    ::selection {
-        background-color:#3065D0;
-        color: white;
-        text-shadow: none;
-    }  
-
-    input ,textarea {
-
-        &::placeholder {
-            font-size: inherit;
-            font-weight: inherit;
-            color: inherit;
-            font-family: inherit;
-        }
-
-    }
-
-    input:focus::placeholder, textarea:focus::placeholder {
-        opacity: 0;
-    }
-
+input:focus::placeholder, textarea:focus::placeholder {
+    opacity: 0;
 }
 
 @media (min-width: 1300px) {
     .container{
         &.vy-container-1 {
-            max-width: 1246px;
+            max-width: 1240px;
         }
 
     }
     
 }
 
+.vy-p-relative {
+    position: relative;
+    z-index: 1;
+}
 
+.vy-ml-auto {
+    margin-left: auto;
+}
+
+
+
+.vy-font-400 {
+    font-weight: 400;
+}
+
+.vy-font-500 {
+    font-weight: 500;
+}
+
+.vy-font-600 {
+    font-weight: 600;
+}
+
+.vy-font-700 {
+    font-weight: 700;
+}
+
+.vy-font-800 {
+    font-weight: 800;
+}
+
+.vy-font-900 {
+    font-weight: 900;
+}
+
+.vy-img-cover {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
 /* 
     vy-common-css-end
 */
