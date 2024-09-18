@@ -1,0 +1,30 @@
+/* 
+    vy-video-start
+*/
+.vy-video-1 {
+    position: relative;
+    z-index: 1;
+    height: 560px;
+    overflow: hidden;
+    filter: grayscale(1);
+
+    @media #{$md} {
+        height: 400px;
+    }
+
+    @media #{$xs} {
+        height: 350px;
+    }
+
+    &-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        z-index: 2;
+    }
+}
+
+/* 
+    vy-video-end
+*/

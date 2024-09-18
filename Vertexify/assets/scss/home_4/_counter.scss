@@ -1,0 +1,47 @@
+/* 
+    counter-start
+*/
+.vy-counter {
+    padding-left: 40px;
+    border-left: 2px solid var(--vy-clr-pr-1);
+    flex: 0 0 auto;
+    max-width: 280px;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &:not(:last-child) {
+            margin-bottom: 46px;
+        }
+    
+        .item-title {
+            flex: 0 0 auto;
+            font-size: 64px;
+            line-height: 1;
+
+            @media #{$lg,$md,$xs} {
+                font-size: 52px;
+            }
+
+    
+            span {
+                &:nth-child(2) {
+                    color: var(--vy-clr-pr-1);
+                    font-size: 45px;
+                    font-family: var(--vt-semibold);
+                    margin-left: -5px;
+                }
+            }
+        }
+    
+        .item-disc {
+            line-height: 24px;
+        }
+    }
+}
+
+/* 
+    counter-end
+*/

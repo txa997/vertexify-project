@@ -4,8 +4,30 @@
 
 /* subtitle */
 
-.vy-font-400 {
+.vy-ff-400 {
     font-family: var(--vt-body-font);
+    color: var(--vy-clr-black-1);
+    text-transform: capitalize;
+    margin-bottom: 0px;
+
+    &:is(.has-clr-white) {
+        color: #fff;
+    }
+}
+
+.vy-ff-500 {
+    font-family: var(--vt-heading);
+    color: var(--vy-clr-black-1);
+    text-transform: capitalize;
+    margin-bottom: 0px;
+
+    &:is(.has-clr-white) {
+        color: #fff;
+    }
+}
+
+.vy-ff-600 {
+    font-family: var(--vt-semibold);
     color: var(--vy-clr-black-1);
     text-transform: capitalize;
     margin-bottom: 0px;
@@ -90,6 +112,7 @@
     line-height: 32px;
     color: var(--vy-clr-gray-2);
     margin-bottom: 0;
+    font-weight: 400;
 }
 
 /* 

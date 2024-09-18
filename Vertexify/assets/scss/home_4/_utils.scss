@@ -4,6 +4,8 @@
 
 :root {
     --vy-clr-pr-1: #3533FF;
+    
+    --vy-clr-sd-1: #D8FFFF;
 
 
     --vy-clr-black-1: #000000;
@@ -101,6 +103,9 @@ input:focus::placeholder, textarea:focus::placeholder {
     
 }
 
+.vy-fix {
+    overflow: hidden;
+}
 .vy-p-relative {
     position: relative;
     z-index: 1;
@@ -141,6 +146,25 @@ input:focus::placeholder, textarea:focus::placeholder {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+
+.swiper-notification {
+    display: none;
+}
+
+.vy-h-gap-20 {
+    width: 100%;
+    height: 20px;
+}
+
+.vy-scn-m-20 {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @media #{$xs} {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 /* 
