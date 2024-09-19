@@ -1,0 +1,55 @@
+/* 
+    vy-faq-1-start
+*/
+.vy-faq-1 {
+    &-scn-title {
+        max-width: 625px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-acroding {
+        .vt-faq-item-area {
+            .accordion-button {
+
+                @media #{$md,$xs} {
+                    font-size: 20px;
+                }
+
+                &::after {
+                    color: var(--vy-clr-pr-1);
+                    background: var(--vy-clr-sd-1);
+                    border: none;
+                }
+    
+            }
+            .accordion-button {
+                &:not(.collapsed) {
+                    &:after {
+                        transform: rotate(0);
+                        background: var(--vy-clr-pr-1);
+                        border: none;
+                    }
+                }
+            }
+
+            .accordion-item {
+                &:is(.faq_active) {
+                    border-color: var(--vy-clr-pr-1);
+                }
+            }
+        }
+    }
+
+    &-content {
+        .disc {
+            color: var(--vy-clr-gray-2);
+            margin-bottom: 21px;
+        }
+    }
+}
+
+
+/* 
+    vy-faq-1-end
+*/

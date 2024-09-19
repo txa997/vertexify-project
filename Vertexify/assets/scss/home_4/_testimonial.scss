@@ -15,6 +15,10 @@
         background: var(--vy-clr-sd-1);
         padding: 45px 48px;
 
+        @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+            padding: 45px 25px;
+        }
+
         .vy-star {
             margin-bottom: 20px;
         }
@@ -54,6 +58,18 @@
         margin-left: -40px;
         margin-right: -40px;
 
+        @media #{$lg,$md} {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        @media #{$xs} {
+            margin-left: 0px;
+            margin-right: 0px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
         &-pagi {
             display: flex;
             align-items: center;
@@ -77,6 +93,30 @@
                     background: transparent;
                     border-color: var(--vy-clr-pr-1);
                 }
+            }
+        }
+
+        .vy-t1-slider-btn-left {
+            position: absolute;
+            top: 42%;
+            transform: translateY(-50%);
+            left: 4%;
+            z-index: 1;
+
+            @media #{$md,$xs} {
+                left: 1%;
+            }
+        }
+
+        .vy-t1-slider-btn-right {
+            position: absolute;
+            top: 42%;
+            transform: translateY(-50%);
+            right: 4%;
+            z-index: 1;
+
+            @media #{$md,$xs} {
+                right: 1%;
             }
         }
     }

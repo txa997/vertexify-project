@@ -83,6 +83,26 @@
     letter-spacing: -1px;
     margin-bottom: 0;
 
+    @media #{$xl} {
+        font-size: 55px;
+    }
+
+    @media #{$lg} {
+        font-size: 40px;
+    }
+
+    @media #{$md} {
+        font-size: 35px;
+    }
+
+    @media #{$xs} {
+        font-size: 25px;
+    }
+
+    @media #{$sm} {
+        font-size: 30px;
+    }
+
     &:is(.has-45) {
         font-size: 45px;
         line-height: 1.06;

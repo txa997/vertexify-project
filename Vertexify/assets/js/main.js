@@ -77,19 +77,24 @@ if($('.vy-t1-active').length) {
             clickable: true,
         },
 
+		navigation: {
+			nextEl: ".vy-t1-slider-btn-right",
+			prevEl: ".vy-t1-slider-btn-left",
+		},
+
 
         breakpoints: {
 			0: {
 				slidesPerView: 1,
 			},
 			576: {
-				slidesPerView: 2,
+				slidesPerView: 1,
 			},
 			768: {
 				slidesPerView: 2,
 			},
 			992: {
-				slidesPerView: 3,
+				slidesPerView: 2,
 			},
 			1200: {
 				slidesPerView: 3,

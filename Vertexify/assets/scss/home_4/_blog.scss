@@ -1,0 +1,40 @@
+/* 
+    vy-blog-1-start
+*/
+.vy-blog-1 {
+    &-item {
+        &:is(.vt-blog-item) {
+            &:is(.ver_2) {
+                width: 100%;
+                max-width: 100%;
+                .item-tag a span {
+                    background-color: var(--vy-clr-black-1);
+                    color: var(--vy-clr-white-1);
+                }
+
+               .item-img {
+                    margin-bottom: 21px;
+                    height: 384px;
+
+                    @media #{$xs} {
+                        height: 250px;
+                    }
+
+                    @media #{$sm} {
+                        height: 300px;
+                    }
+                }
+
+                .blog_title {
+                    @media #{$lg,$md,$xs} {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+/* 
+    vy-blog-1-end
+*/

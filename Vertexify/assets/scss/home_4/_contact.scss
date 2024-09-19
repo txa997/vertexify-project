@@ -1,0 +1,76 @@
+/* 
+    vy-contact-1-start
+*/
+.vy-contact-1 {
+    &-area {
+        background-color: var(--vy-clr-pr-1);
+    }
+
+    &-scn-title {
+        .vy-subtitle-1 {
+            color: var(--vy-clr-white-1);
+
+            &::after {
+                background-color: var(--vy-clr-white-1);
+            }
+
+            &::before {
+                background-color: var(--vy-clr-white-1);
+            }
+        }
+
+        .vy-scn-title-1 {
+            color: var(--vy-clr-white-1);
+            margin-bottom: 25px;
+        }
+        .scn-disc {
+            color: var(--vy-clr-white-1);
+        }
+    }
+
+    &-patner {
+        &:is(.vt-contact-partner) {
+            padding-top: 0;
+        }
+        .disc {
+            color: var(--vy-clr-white-1);
+            font-size: 16px;
+            opacity: 80%;
+        }
+    }
+
+    &-form {
+        &-content {
+            &:is(.vt-contact-form) {
+                background: var(--vy-clr-white-1);
+            }
+
+            .vt-contact-form-area .contact-select span {
+                border-radius: 0;
+                background: var(--vy-clr-sd-1);
+                color: #101010;
+
+                &:hover {
+                    background: var(--vy-clr-pr-1);
+                    color:  var(--vy-clr-sd-1);
+                }
+
+                &::before {
+                    background: var(--vy-clr-pr-1);
+                }
+            }
+
+            .vt-contact-form-area .contact-select input:checked ~ span {
+                background: var(--vy-clr-pr-1);
+                color:  var(--vy-clr-sd-1);
+            }
+
+            .vt-contact-form-area .contact-select {
+                margin: 1px 1px;
+            }
+        }
+    }
+}
+/* 
+    vy-contact-1-end
+*/
