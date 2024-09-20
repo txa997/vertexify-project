@@ -221,6 +221,17 @@
         border-radius: 50%;
         background: #D8FFFF;
         position: absolute;
+        transition: all .5s var(--cube-1);
+    }
+
+    &:hover {
+        .icon {
+            background: var(--vy-clr-pr-1);
+
+            svg path {
+                stroke: var(--vy-clr-white-1);
+            }
+        }
     }
 }
 

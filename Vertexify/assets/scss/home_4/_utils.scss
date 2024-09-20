@@ -167,6 +167,26 @@ input:focus::placeholder, textarea:focus::placeholder {
         margin-right: 10px;
     }
 }
+
+.txaa-split-text-3 {
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.txaa-split-text-4 {
+    text-transform: unset  !important;
+
+    .split-line {
+        .div {
+            div {
+                &:nth-child(1) {
+                    text-transform: capitalize;
+                }
+
+            }
+        }
+    }
+}
 /* 
     vy-common-css-end
 */

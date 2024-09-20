@@ -1,18 +1,103 @@
 
 
+// title-animation
+if($('[txaa-split-text-1]').length) {
+	var txasplit1 = $('[txaa-split-text-1]');
+	if(txasplit1.length == 0) gsap.registerPlugin(SplitText); txasplit1.each(function(index, el) {
+		el.split = new SplitText(el, { 
+		type: "lines",
+		linesClass: "split-line"
+		});
+	});
+}
+
+
+if($('.txaa-split-text-3').length) {
+	var txasplit2 = $(".txaa-split-text-3");
+
+	if(txasplit2.length == 0) ; gsap.registerPlugin(SplitText); txasplit2.each(function(index, el) {
+	
+		el.split = new SplitText(el, { 
+			type: "lines",
+			linesClass: "split-line"
+		});
+	
+		if( $(el).hasClass('txaa-split-text-3-ani') ){
+			gsap.set(el.split.lines, {
+				color: "#3533ff",
+				yPercent: -100,
+			});
+		}
+	
+		el.anim = gsap.to(el.split.lines, {
+			scrollTrigger: {
+				trigger: el,
+				start: "top 90%",
+				end: "top 60%",
+				markers: false,
+				scrub: 1,
+			},
+	
+			xPercent: 0,
+			yPercent: 0,
+			color: "inherit",
+			opacity: 1,
+			duration: .7,
+			stagger: 0.2,
+		});
+	
+	});
+}
+
+if($('.txaa-split-text-4').length) {
+	var txasplit2 = $(".txaa-split-text-4");
+
+	if(txasplit2.length == 0) ; gsap.registerPlugin(SplitText); txasplit2.each(function(index, el) {
+	
+		el.split = new SplitText(el, { 
+			type: "lines,words,chars",
+			linesClass: "split-line"
+		});
+	
+		if( $(el).hasClass('txaa-split-text-4-ani') ){
+			gsap.set(el.split.chars, {
+				opacity: 0,
+			});
+		}
+	
+		el.anim = gsap.to(el.split.chars, {
+			scrollTrigger: {
+				trigger: el,
+				start: "top 90%",
+				end: "top 60%",
+				markers: false,
+				scrub: 1,
+			},
+	
+			xPercent: 0,
+			yPercent: 0,
+			color: "inherit",
+			opacity: 1,
+			duration: .7,
+			stagger: 0.2,
+		});
+	
+	});
+}
+
 // home-1-hero
 if($('.vy-h1-active').length) {
     let slider = new Swiper('.vy-h1-active', {
         loop: true,
         spaceBetween: 0,
-        speed: 500,
-        // effect: "fade",
-        // fadeEffect: {
-        //     crossFade: true
-        // },
+        speed: 1000,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
 
         autoplay: {
-            delay: 5000000,
+            delay: 50000000,
         },
 
         pagination: {
