@@ -3,8 +3,10 @@
 */
 :root {
   --vy-clr-pr-1: #3533FF;
+  --vy-clr-pr-2: #C9F7CA;
   --vy-clr-sd-1: #D8FFFF;
   --vy-clr-black-1: #000000;
+  --vy-clr-black-2: #101010;
   --vy-clr-white-1: #ffffff;
   --vy-clr-gray-1: #DFE1E5;
   --vy-clr-gray-2: #5D5D5D;
@@ -130,6 +132,11 @@ input:focus::placeholder, textarea:focus::placeholder {
 .vy-h-gap-20 {
   width: 100%;
   height: 20px;
+}
+
+.vy-h-gap-8 {
+  width: 100%;
+  height: 8px;
 }
 
 .vy-scn-m-20 {
@@ -757,7 +764,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     vy-all-title-para-end
 */
 /* 
-    h4-header-start
+    vy-header-1-start
 */
 .vy-header-1-top {
   border-bottom: 1px solid var(--vy-clr-gray-1);
@@ -949,7 +956,67 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 /* 
-    h4-header-end
+    vy-header-1-end
+*/
+/* 
+    vy-header-2-start
+*/
+.vy-header-2-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.vy-header-2-top {
+  background: var(--vy-clr-white-1);
+  border-radius: 16px;
+  padding: 0 24px;
+  gap: 24px;
+}
+.vy-header-2-top .vy-phone-btn .icon {
+  background: transparent;
+  width: auto;
+  height: auto;
+}
+.vy-header-2-top .vy-phone-btn .icon svg * {
+  stroke: var(--vy-clr-black-2);
+}
+.vy-header-2-top .vy-phone-btn b {
+  color: var(--vy-clr-black-2);
+  transition: all 0.3s var(--cube-1);
+}
+.vy-header-2-top .vy-phone-btn:hover b {
+  color: var(--vy-clr-pr-1);
+}
+.vy-header-2-top .vy-search-btn-1 i {
+  color: var(--vy-clr-black-2);
+}
+.vy-header-2-top .vy-search-btn-1:hover i {
+  color: var(--vy-clr-pr-1);
+}
+.vy-header-2-top .vy-join-btn-1 .icon svg * {
+  fill: var(--vy-clr-black-2);
+}
+.vy-header-2-top .vy-social-1 {
+  color: var(--vy-clr-black-2);
+}
+.vy-header-2-top .vy-social-1 a:hover {
+  color: var(--vy-clr-pr-1);
+}
+.vy-header-2-main {
+  background: var(--vy-clr-white-1);
+  padding: 0 24px;
+  border-radius: 16px;
+  gap: 32px;
+}
+
+.vy-main-navigation:is(.has-home-5) .navbar-nav li:is(.dropdown) > a::before {
+  color: var(--vy-clr-black-2);
+}
+
+/* 
+    vy-header-2-end
 */
 /* 
     h4-hero-start
@@ -2030,6 +2097,16 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     vy-footer-1-end
+*/
+/* 
+    home-5-common-css-start
+*/
+.vy-home-5 {
+  background-color: #E7E7E7;
+}
+
+/* 
+    home-5-common-css-end
 */
 
 /*# sourceMappingURL=main.css.map */
