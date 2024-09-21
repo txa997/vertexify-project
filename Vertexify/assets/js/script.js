@@ -9,16 +9,33 @@ Last change:    00/00/00
 ;(function($) {
 
 	"use strict";
+
 	const lenis = new Lenis({
-		duration: .5,	
-	})
-
-
-	lenis.on('scroll', ScrollTrigger.update);
-	gsap.ticker.add((time) => {
-		lenis.raf(time * 1000)
-	});
-	gsap.ticker.lagSmoothing(0);
+		duration: .5, 
+		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+		direction: 'vertical', 
+		smooth: true, 
+		smoothTouch: false, 
+	  });
+	  
+	  function raf(time) {
+		lenis.raf(time);
+		requestAnimationFrame(raf);
+	  }
+	  
+	  requestAnimationFrame(raf);
+	  $('a[href^="#"]').on('click', function (e) {
+		e.preventDefault(); 
+	  
+		const target = $(this.getAttribute('href')); 
+	  
+		if (target.length) {
+		  lenis.scrollTo(target[0], {
+			duration: 1.2, 
+			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+		  });
+		}
+	  });
 
 	/*
 preloader

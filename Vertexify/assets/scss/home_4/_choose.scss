@@ -78,6 +78,12 @@
                 line-height: 28px;
                 opacity: 87%;
             }
+
+            &:hover {
+                .icon {
+                    animation: bounceIn 1s;
+                }
+            }
         }
         
     }

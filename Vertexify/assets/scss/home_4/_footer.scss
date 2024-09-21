@@ -1,0 +1,105 @@
+/* 
+    vy-footer-1-start
+*/
+.vy-footer-1 {
+    &-area {
+
+        .vt-footer-widget-area {
+            justify-content: space-between;
+
+            @media #{$xl,$lg} {
+                gap: 30px 50px;
+            }
+        }
+        
+        .vt-footer-widget {
+            .social-widget {
+                a {
+                    &:nth-last-child(1) {
+                        margin-right: 0;
+                    }
+    
+                }
+            }
+    
+            &:is(.white_color) {
+                .cta-widget {
+                    .cta-info {
+                        .info-icon {
+                            background-color: var(--vy-clr-pr-1);
+                        }
+    
+                        .info-text {
+                            a {
+                                &:hover {
+                                    opacity: 72%;
+                                    transform: translateX(-3px);
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .social-widget {
+                    a {
+                        &:hover {
+                            color: var(--vy-clr-pr-1);
+                            transform: scale(150%);
+                        }
+                    }
+                }
+    
+                .cta-widget .cta-text a {
+                    i {
+                        color: var(--vy-clr-pr-1);
+                    }
+    
+                    &:hover {
+                        color: var(--vy-clr-pr-1);
+                    }
+                }
+            }
+        }
+    
+    
+        .vt-footer-content  {
+            .vt-scrollup {
+                right: 2%;
+    
+                &:is(.white_color) {
+                    a {
+                        transition: all .3s var(--cube-1);
+    
+                        &:hover {
+                            color: var(--vy-clr-pr-1);
+                            transform: translateY(-10px) scale(1.3);
+                        }
+                    }
+                }
+            }
+        }
+    
+        .vt-footer-copyright.white_color .vt-copyright-text a {
+            &:hover {
+                color: var(--vy-clr-pr-1);
+            }
+        }
+    
+    }
+
+    &-bg-shape {
+        width: 16%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        text-align: right;
+        opacity: 20%;
+    }
+}
+
+
+
+
+/* 
+    vy-footer-1-end
+*/

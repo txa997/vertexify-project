@@ -1,6 +1,18 @@
 /* 
     h4-hero-start
 */
+
+.vy-multi-scn-1::after {
+    content: "";
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,212,255,0) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .vy-hero-1 {
 
     &-row {
@@ -236,6 +248,8 @@
             }
         }
     }
+
+
 }
 
 @keyframes h1-plybtn0 {

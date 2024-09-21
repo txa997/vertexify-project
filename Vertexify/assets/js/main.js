@@ -1,5 +1,106 @@
 
 
+jQuery(window).on('load', function(){
+	if($('.txaa-split-text-3').length) {
+		var txasplit2 = $(".txaa-split-text-3");
+	
+		if(txasplit2.length == 0) ; gsap.registerPlugin(SplitText); txasplit2.each(function(index, el) {
+		
+			el.split = new SplitText(el, { 
+				type: "lines",
+				linesClass: "split-line"
+			});
+		
+			if( $(el).hasClass('txaa-split-text-3-ani') ){
+				gsap.set(el.split.lines, {
+					color: "#3533ff",
+					yPercent: -100,
+				});
+			}
+		
+			el.anim = gsap.to(el.split.lines, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 90%",
+					end: "top 60%",
+					markers: false,
+					scrub: 2,
+				},
+		
+				xPercent: 0,
+				yPercent: 0,
+				color: "inherit",
+				opacity: 1,
+				duration: .7,
+				stagger: 0.2,
+			});
+		
+		});
+	}
+
+	
+	if($('.txaa-split-text-4').length) {
+		var txasplit2 = $(".txaa-split-text-4");
+
+		if(txasplit2.length == 0) ; gsap.registerPlugin(SplitText); txasplit2.each(function(index, el) {
+		
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+		
+			if( $(el).hasClass('txaa-split-text-4-ani') ){
+				gsap.set(el.split.chars, {
+					opacity: 0,
+				});
+			}
+		
+			el.anim = gsap.to(el.split.chars, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 90%",
+					end: "top 60%",
+					markers: false,
+					scrub: 2,
+				},
+		
+				xPercent: 0,
+				yPercent: 0,
+				color: "inherit",
+				opacity: 1,
+				duration: .7,
+				stagger: 0.2,
+			});
+		
+		});
+	}
+
+	// home-1-hero
+	if($('.vy-h1-active').length) {
+		let slider = new Swiper('.vy-h1-active', {
+			loop: true,
+			spaceBetween: 0,
+			speed: 1000,
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true
+			},
+
+			autoplay: {
+				delay: 5000,
+			},
+
+			pagination: {
+				el: ".vy-h1-pagination",
+				clickable: true,
+			},
+
+
+		});
+	}
+
+});
+
 // title-animation
 if($('[txaa-split-text-1]').length) {
 	var txasplit1 = $('[txaa-split-text-1]');
@@ -12,103 +113,6 @@ if($('[txaa-split-text-1]').length) {
 }
 
 
-if($('.txaa-split-text-3').length) {
-	var txasplit2 = $(".txaa-split-text-3");
-
-	if(txasplit2.length == 0) ; gsap.registerPlugin(SplitText); txasplit2.each(function(index, el) {
-	
-		el.split = new SplitText(el, { 
-			type: "lines",
-			linesClass: "split-line"
-		});
-	
-		if( $(el).hasClass('txaa-split-text-3-ani') ){
-			gsap.set(el.split.lines, {
-				color: "#3533ff",
-				yPercent: -100,
-			});
-		}
-	
-		el.anim = gsap.to(el.split.lines, {
-			scrollTrigger: {
-				trigger: el,
-				start: "top 90%",
-				end: "top 60%",
-				markers: false,
-				scrub: 1,
-			},
-	
-			xPercent: 0,
-			yPercent: 0,
-			color: "inherit",
-			opacity: 1,
-			duration: .7,
-			stagger: 0.2,
-		});
-	
-	});
-}
-
-if($('.txaa-split-text-4').length) {
-	var txasplit2 = $(".txaa-split-text-4");
-
-	if(txasplit2.length == 0) ; gsap.registerPlugin(SplitText); txasplit2.each(function(index, el) {
-	
-		el.split = new SplitText(el, { 
-			type: "lines,words,chars",
-			linesClass: "split-line"
-		});
-	
-		if( $(el).hasClass('txaa-split-text-4-ani') ){
-			gsap.set(el.split.chars, {
-				opacity: 0,
-			});
-		}
-	
-		el.anim = gsap.to(el.split.chars, {
-			scrollTrigger: {
-				trigger: el,
-				start: "top 90%",
-				end: "top 60%",
-				markers: false,
-				scrub: 1,
-			},
-	
-			xPercent: 0,
-			yPercent: 0,
-			color: "inherit",
-			opacity: 1,
-			duration: .7,
-			stagger: 0.2,
-		});
-	
-	});
-}
-
-// home-1-hero
-if($('.vy-h1-active').length) {
-    let slider = new Swiper('.vy-h1-active', {
-        loop: true,
-        spaceBetween: 0,
-        speed: 1000,
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true
-        },
-
-        autoplay: {
-            delay: 50000000,
-        },
-
-        pagination: {
-            el: ".vy-h1-pagination",
-            clickable: true,
-        },
-
-
-    });
-}
-
 // services-1
 if($('.vy-s1-active').length) {
     let slider = new Swiper('.vy-s1-active', {
@@ -116,7 +120,7 @@ if($('.vy-s1-active').length) {
         spaceBetween: 32,
         speed: 500,
         autoplay: {
-            delay: 5000000,
+            delay: 5000,
         },
 
 
@@ -154,7 +158,7 @@ if($('.vy-t1-active').length) {
         spaceBetween: 32,
         speed: 500,
         autoplay: {
-            delay: 5000000,
+            delay: 5000,
         },
 
         pagination: {
@@ -193,4 +197,107 @@ if($('.vy-t1-active').length) {
 		},
 
     });
+}
+
+// cta
+var vycta1 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: vycta1,
+	  trigger: '.vy-get-touch-1-area',
+	  start: "top 90%",
+	  end: "top 0%",
+	  scrub: .5,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+vycta1.from(".vy-get-touch-1-bg-img" , { yPercent: -50 ,  duration:1 })
+
+// img-parallax
+gsap.utils.toArray(".wa-img-parallax").forEach(function(container) {
+	let image = container.querySelector("img");
+
+	let tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: container,
+			scrub: .5,
+		},
+	}); 
+	tl.from(image, {
+		yPercent: -30,
+		ease: "none",
+	}).to(image, {
+		yPercent: 30,
+		ease: "none",
+	}); 
+});
+
+
+// line-scale
+const txaascale0 = gsap.utils.toArray('.txaascale0');
+txaascale0.forEach((box, i) => {
+	const anim = gsap.fromTo(box, 
+		
+	{ scaleX: 0, duration: 2, }, 
+	{ scaleX: 1, duration: 2, });
+
+	ScrollTrigger.create({
+		trigger: box,
+		start: "top 90%",
+		animation: anim,
+		toggleActions: 'play none none reverse',
+		once: false,
+		markers: false,
+
+	});
+})
+
+
+// footer
+var vyf1 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: vyf1,
+	  trigger: '.vy-footer-1-bg-shape',
+	  start: "top 100%",
+	  end: "top 0%",
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+vyf1.from(".vy-footer-1-bg-shape img" , { yPercent: 50 , xPercent: 50,  duration:1 })
+vyf1.from(".vy-footer-1-bg-shape" , { opacity: 1 ,  duration:1 } , "<=.5")
+
+// video-1
+var vyvideo1 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: vyvideo1,
+	  trigger: '.has-video-ani',
+	  start: "top 70%",
+	  end: "top 0%",
+	  toggleActions: "play none none reverse",
+	  markers: false
+	}
+});
+vyvideo1.fromTo(".has-video-ani" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",  duration:1 }, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 })
+vyvideo1.from(".has-video-ani-elm" , { top: "-100%" ,  duration:1 }, "<=.2")
+
+// mouse-drag
+if ($(".vy-cursor").length) {
+	const cursor = document.querySelector('.vy-cursor');
+	gsap.set(cursor, {
+		xPercent: -50,
+		yPercent: -50,
+	});
+	document.addEventListener('pointermove', movecursor);
+	function movecursor(e) {
+		gsap.to(cursor, {
+			duration: 0.2,
+			x: e.clientX,
+			y: e.clientY,
+		});
+	}
 }

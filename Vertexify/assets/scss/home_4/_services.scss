@@ -93,6 +93,11 @@
             @media #{$xs} {
                 font-size: 24px;
             }
+
+            &:hover {
+                color: var(--vy-clr-sd-1);
+                transform: translateX(5px);
+            }
         }
 
         .item-disc {
@@ -111,6 +116,11 @@
             transition: all .5s var(--cube-1);
             transform: translateY(20px);
             opacity: 0;
+
+            &:hover {
+                color: var(--vy-clr-sd-1);
+                border-color: var(--vy-clr-sd-1);
+            }
         }
 
         &:hover {
@@ -134,6 +144,16 @@
         @media #{$xxl,$xl,$lg,$md,$xs} {
             margin-left: 0px;
             margin-right: 0px;
+        }
+
+        .swiper-container {
+
+            &:hover {
+                .vy-cursor {
+                    opacity: 1;
+                }
+            }
+ 
         }
     }
 }
