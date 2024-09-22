@@ -15,6 +15,7 @@
     --vy-clr-white-1: #ffffff;
     --vy-clr-gray-1: #DFE1E5;
     --vy-clr-gray-2: #5D5D5D;
+    --vy-clr-gray-3: #4F4F4F;
   
 }
 
@@ -106,6 +107,18 @@ input:focus::placeholder, textarea:focus::placeholder {
     
 }
 
+.vy-home-5 {
+    background-color: #E7E7E7;
+}
+
+.vy-container-2 {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
 .vy-fix {
     overflow: hidden;
 }
@@ -175,6 +188,14 @@ input:focus::placeholder, textarea:focus::placeholder {
     }
 }
 
+.vy-redius-16 {
+    border-radius: 16px;
+}
+
+.vy-bg-white {
+    background-color: var(--vy-clr-white-1);
+}
+
 .txaa-split-text-3 {
     overflow: hidden;
     padding-bottom: 5px;
@@ -194,6 +215,7 @@ input:focus::placeholder, textarea:focus::placeholder {
         }
     }
 }
+
 /* 
     vy-common-css-end
 */

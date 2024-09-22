@@ -1,0 +1,118 @@
+/* 
+    vy-counter-1-start
+*/
+.vy-counter {
+    padding-left: 40px;
+    border-left: 2px solid var(--vy-clr-pr-1);
+    flex: 0 0 auto;
+    max-width: 280px;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &:not(:last-child) {
+            margin-bottom: 46px;
+        }
+    
+        .item-title {
+            flex: 0 0 auto;
+            font-size: 64px;
+            line-height: 1;
+
+            @media #{$lg,$md,$xs} {
+                font-size: 52px;
+            }
+
+    
+            span {
+                &:nth-child(2) {
+                    color: var(--vy-clr-pr-1);
+                    font-size: 45px;
+                    font-family: var(--vt-semibold);
+                    margin-left: -5px;
+                    font-weight: 700;
+                }
+            }
+        }
+    
+        .item-disc {
+            line-height: 24px;
+        }
+    }
+}
+
+/* 
+    vy-counter-1-end
+*/
+
+/* 
+    vy-counter-2-start
+*/
+.vy-counter-2 {
+    &-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    &-box {
+        padding: 32px 20px;
+        padding-top: 18px;
+
+        .content {
+            max-width: 390px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .item-title {
+            font-size: 128px;
+            line-height: 1;
+            margin-bottom: 70px;
+
+            @media #{$xl} {
+                font-size: 110px;
+            }
+
+            @media #{$lg} {
+                font-size: 90px;
+            }
+
+            @media #{$md} {
+                font-size: 70px;
+            }
+
+            @media #{$xs} {
+                font-size: 50px;
+            }
+
+            span {
+                &:nth-child(2) {
+                    font-size: 45px;
+                    font-weight: 700;
+                    margin-left: -17px;
+
+                    @media #{$xs} {
+                        margin-left: -5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* 
+    vy-counter-2-end
+*/

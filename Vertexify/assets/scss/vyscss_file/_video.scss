@@ -1,5 +1,5 @@
 /* 
-    vy-video-start
+    vy-video-1-start
 */
 .vy-video-1 {
     position: relative;
@@ -26,5 +26,26 @@
 }
 
 /* 
-    vy-video-end
+    vy-video-1-end
+*/
+
+/* 
+    vy-video-2-end
+*/
+.vy-video-2-area {
+    .vy-video-1 {
+        height: 600px;
+
+        &-img {
+            height: 100%;
+        }
+
+        .swiper-container {
+            height: 100%;
+        }
+
+    }
+}
+/* 
+    vy-video-2-end
 */

@@ -99,6 +99,30 @@ jQuery(window).on('load', function(){
 		});
 	}
 
+	// vy-hero-2
+	if($('.vy-h2-img-active').length) {
+		let slider = new Swiper('.vy-h2-img-active', {
+			loop: true,
+			spaceBetween: 0,
+			speed: 1000,
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true
+			},
+
+			autoplay: {
+				delay: 5000,
+			},
+
+			pagination: {
+				el: ".vy-h1-pagination",
+				clickable: true,
+			},
+
+
+		});
+	}
+
 });
 
 // title-animation
@@ -301,3 +325,36 @@ if ($(".vy-cursor").length) {
 		});
 	}
 }
+
+
+// vy-video-2
+if($('.vy-video-2-active').length) {
+	let slider = new Swiper('.vy-video-2-active', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 1000,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+
+		autoplay: {
+			delay: 5000,
+		},
+
+		pagination: {
+			el: ".vy-h1-pagination",
+			clickable: true,
+		},
+
+
+	});
+}
+
+$('#pills-tab[data-mouse="hover"] a').hover(function(){
+	$(this).tab('show');
+});
+$('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+	var target = $(e.relatedTarget).attr('href');
+	$(target).removeClass('active');
+})

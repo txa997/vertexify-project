@@ -155,6 +155,8 @@
           visibility: hidden;
           transform: translateX(15px) translateZ(0);
           transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), visibility 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+
+          
           
           @media #{$lg} {
             min-width: 200px;
@@ -196,6 +198,9 @@
               transform: translateX(15px) translateZ(0);
               transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), visibility 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
   
+              @media #{$xxl,$xl,$lg} {
+                min-width: 200px;
+              }
             }
   
             &:hover {
@@ -250,8 +255,23 @@
     border-radius: 16px;
     padding: 0  24px;
     gap: 24px;
+    justify-content: space-between;
+
+    @media #{$xs} {
+      padding: 10px  24px;
+      justify-content: center;
+    }
+
+    @media #{$sm} {
+      padding: 0  24px;
+      justify-content: center;
+    }
 
     .vy-phone-btn {
+      @media #{$xs} {
+        display: none;
+      }
+
       .icon {
         background: transparent;
         width: auto;
@@ -275,6 +295,13 @@
     }
 
     .vy-search-btn-1 {
+      @media #{$xs} {
+        display: none;
+      }
+      @media #{$sm} {
+        display: inline-block;
+      }
+
       i {
         color: var(--vy-clr-black-2);
       }
@@ -287,15 +314,29 @@
     }
     
     .vy-join-btn-1 {
+      @media #{$md,$xs} {
+        display: none;
+      }
+
       .icon {
         svg * {
           fill: var(--vy-clr-black-2);
+        }
+      }
+
+      &:hover {
+        .icon {
+          svg * {
+            fill: var(--vy-clr-pr-1);
+          }
         }
       }
     }
 
     .vy-social-1 {
       color: var(--vy-clr-black-2);
+
+
 
       a {
         &:hover {
@@ -310,6 +351,35 @@
     padding: 0  24px;
     border-radius: 16px;
     gap: 32px;
+
+    @media #{$md,$xs} {
+      padding: 15px 24px;
+    }
+
+    &-action-link {
+      gap: 24px;
+
+      .vy-offcanvas-btn-1 span {
+        background: var(--vy-clr-black-2);
+      }
+
+      .vy-pr-btn-2 {
+        @media #{$xs} {
+          display: none;
+        }
+        @media #{$sm} {
+          display: inline-block;
+        }
+
+        &::before {
+          padding: 14px 20px;
+        }
+        &::after {
+          padding: 14px 20px;
+        }
+      }
+
+    }
   }
 }
 
@@ -319,10 +389,16 @@
       li {
         &:is(.dropdown) {
           > a {
+            padding-right: 18px;
+
             &::before {
               color: var(--vy-clr-black-2);
             }
           }
+        }
+
+        a {
+          padding: 37px 0;
         }
       }
     }
