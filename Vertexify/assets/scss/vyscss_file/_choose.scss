@@ -93,3 +93,214 @@
 /* 
     vy-choose-1-end
 */
+
+/* 
+    vy-choose-2-start
+*/
+.vy-choose-2 {
+    &-row {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 8px;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr ;
+        }
+    }
+
+    &-meddle {
+        padding: 110px 20px;
+    }
+
+    &-content {
+        max-width: 540px;
+
+        .vy-choose-1-features-item .icon svg * {
+            stroke: var(--vy-clr-pr-1);
+        }
+    }
+
+    &-img {
+        height: 822px;
+
+        @media #{$lg} {
+            height: auto;
+        }
+
+        @media #{$md,$xs} {
+            height: 460px;
+        }
+
+        .swiper-container {
+            height: 100%;
+        }
+
+        &-single {
+            filter: grayscale(1);
+            height: 100%;
+        }
+
+        .vy-slider-btn {
+            i {
+                color : var(--vy-clr-pr-1);
+                font-weight: 700;
+            }
+
+            &:hover {
+                i  {
+                    color: var(--vy-clr-white-1);
+                }
+            }
+        }
+
+        .vy-ch2-btn-left {
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            transform: translateY(-50%);
+            z-index: 1;
+
+        }
+
+        .vy-ch2-btn-right {
+            position: absolute;
+            top: 50%;
+            right: 8px;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        &-btn {
+            position: absolute;
+            bottom: 48px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+
+            .vy-roteted-btn-1 {
+                border-color: var(--vy-clr-black-2);
+    
+                .icon {
+                    background: var(--vy-clr-pr-2);
+                    border-color: var(--vy-clr-black-2);
+                    svg * {
+                        stroke: var(--vy-clr-black-2);
+                    }
+                }
+    
+                img {
+                    animation: vy-scroll-down 10s linear infinite;
+                }
+    
+                &:hover {
+                    .icon {
+                        background: var(--vy-clr-black-2);
+                    }
+                }
+            }
+        }
+    }
+
+    &-video {
+        height: 513px;
+
+        @media #{$lg} {
+            height: auto;
+        }
+
+        @media #{$md,$xs} {
+            height: 340px;
+        }
+
+        &-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        video , img {
+            filter: grayscale(1);
+        }
+    }
+
+    &-box {
+        background: var(--vy-clr-pr-1);
+        padding: 75px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+
+        .box-title {
+            font-size: 32px;
+            line-height: 1.18;
+            color: var(--vy-clr-pr-2);
+            margin-bottom: 18px;
+
+            @media #{$lg,$md} {
+                font-size: 26px;
+            }
+
+            @media #{$xs} {
+                font-size: 24px;
+            }
+        }
+        
+        .item-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: var(--vy-clr-pr-2);
+            border-radius: 50%;
+            flex: 0 0 auto;
+            transition: all .4s var(--cube-1);
+
+            &:hover {
+                background: var(--vy-clr-sd-1);
+                transform: scale(90%);
+            }
+        }
+        
+        .content {
+            max-width: 185px;
+        }
+        
+        .bg-shape-1 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    &-right {
+        display: grid;
+        gap: 8px;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr ;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+   
+}
+
+
+
+
+/* 
+    vy-choose-2-end
+*/

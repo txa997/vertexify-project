@@ -351,10 +351,92 @@ if($('.vy-video-2-active').length) {
 	});
 }
 
-$('#pills-tab[data-mouse="hover"] a').hover(function(){
-	$(this).tab('show');
-});
-$('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
-	var target = $(e.relatedTarget).attr('href');
-	$(target).removeClass('active');
-})
+// vy-property-2
+if($('.vy-property-2-active').length) {
+	let slider = new Swiper('.vy-property-2-active', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 1000,
+		// effect: "fade",
+		// fadeEffect: {
+		// 	crossFade: true
+		// },
+
+		autoplay: {
+			delay: 5000,
+		},
+
+		pagination: {
+			el: ".vy-h1-pagination",
+			clickable: true,
+		},
+
+		navigation: {
+			nextEl: ".vy-pro1-btn-right",
+			prevEl: ".vy-pro1-btn-left",
+		},
+
+
+	});
+}
+
+// vy-property-2
+if($('.vy-choose-2-img-active').length) {
+	let slider = new Swiper('.vy-choose-2-img-active', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 1000,
+		// effect: "fade",
+		// fadeEffect: {
+		// 	crossFade: true
+		// },
+
+		autoplay: {
+			delay: 5000,
+		},
+
+		navigation: {
+			nextEl: ".vy-t2-btn-right",
+			prevEl: ".vy-t2-btn-left",
+		},
+
+		pagination: {
+			el: ".vy-t2-pagination",
+			type: 'fraction',
+			formatFractionCurrent: function (number) {
+				if (number < 10) {
+					return '0' + number;
+				} else {
+					return number;
+				}
+			}
+
+		},
+
+
+	});
+}
+
+// vy-property-2
+if($('.vy-testimonial-2-active').length) {
+	let slider = new Swiper('.vy-testimonial-2-active', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 1000,
+		// effect: "fade",
+		// fadeEffect: {
+		// 	crossFade: true
+		// },
+
+		autoplay: {
+			delay: 5000,
+		},
+
+		navigation: {
+			nextEl: ".vy-ch2-btn-right",
+			prevEl: ".vy-ch2-btn-left",
+		},
+
+
+	});
+}

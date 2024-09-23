@@ -1,0 +1,200 @@
+/* 
+    vy-property-2-start
+*/
+.vy-property-2 {
+    &-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 8px;
+
+        @media #{$xs} {
+            grid-template-columns:  1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--vy-clr-pr-2);
+        padding: 80px 20px;
+
+        .bg-shape {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &-roteted-btn {
+        position: absolute;
+        top: -60px;
+        right: 15%;
+
+        .vy-roteted-btn-1 {
+            border-color: var(--vy-clr-black-2);
+
+            .icon {
+                background: var(--vy-clr-pr-2);
+                border-color: var(--vy-clr-black-2);
+                svg * {
+                    stroke: var(--vy-clr-black-2);
+                }
+            }
+
+            img {
+                animation: vy-scroll-down 10s linear infinite;
+            }
+
+            &:hover {
+                .icon {
+                    background: var(--vy-clr-black-2);
+                }
+            }
+        }
+    }
+    
+    &-content {
+        .item-title {
+            font-size: 32px;
+            line-height: 1.18;
+            max-width: 216px;
+            margin-bottom: 19px;
+            transition: all .3s var(--cube-1);
+
+            @media #{$lg} {
+                font-size: 28px;
+            }
+
+            @media #{$md} {
+                font-size: 24px;
+            }
+
+            @media #{$xs} {
+                font-size: 22px;
+            }
+
+            &:hover {
+                color: var(--vy-clr-pr-1);
+            }
+        }
+
+        .item-disc {
+            opacity: 80%;
+            margin-bottom: 38px;
+        }
+
+        .item-btn {
+            display: inline-block;
+            font-family: var(---vt-heading);
+            text-transform: capitalize;
+            font-size: 16px;
+            color: var(--vy-clr-black-2);
+            border-bottom: 1.5px solid;
+            line-height: 1.1;
+            transition: all .3s var(--cube-1);
+
+            &:hover {
+                color: var(--vy-clr-pr-1);
+                transform: translateX(3px);
+            }
+        }
+
+        .slideindown {
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: all .5s var(--cube-1);
+            transition-delay: 0s;
+        }
+
+        
+    }
+
+    
+    &-slider {
+        max-width: 304px;
+        width: 100%;
+
+        @media #{$xs} {
+            max-width: 210px;
+        }
+
+        @media #{$sm} {
+            max-width: 304px;
+        }
+
+        .swiper-container {
+            .swiper-slide {
+                &:is(.swiper-slide-active) {
+                    .slideindown {
+                        transform: translateY(0%);
+                        opacity: 1;
+                        transition-delay: .4s;
+
+
+                        &:nth-child(1) {
+                            transition-delay: .7s;
+                        }
+
+                        &:nth-child(2) {
+                            transition-delay: .6s;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    &-img {
+        height: 400px;
+
+        &-single {
+            filter: grayscale(1);
+            height: 100%;
+        }
+
+        .swiper-container {
+            height: 100%;
+        }
+
+        .vy-slider-btn {
+            i {
+                color : var(--vy-clr-pr-1);
+                font-weight: 700;
+            }
+
+            &:hover {
+                i  {
+                    color: var(--vy-clr-white-1);
+                }
+            }
+        }
+
+        .vy-pro1-btn-left {
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            transform: translateY(-50%);
+            z-index: 1;
+
+        }
+
+        .vy-pro1-btn-right {
+            position: absolute;
+            top: 50%;
+            right: 8px;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+    }
+}
+
+
+/* 
+    vy-property-2-end
+*/

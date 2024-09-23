@@ -38,3 +38,30 @@
 /* 
     vy-blog-1-end
 */
+/* 
+    vy-blog-2-start
+*/
+.vy-blog-2-area {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.vy-blog-1-item {
+    &:is(.vy-ver-2) {
+        .item-img {
+            img {
+                filter: grayscale(1);
+            }
+        }
+
+        &:is(.ver_2) {
+            .item-tag a span {
+                background: var(--vy-clr-white-1);
+                color: var(--vy-clr-black-1);
+            }
+        }
+
+    }
+}
+/* 
+    vy-blog-2-end
+*/

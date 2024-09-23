@@ -6,6 +6,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 8px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
     }
 
     &-left {
@@ -16,25 +20,22 @@
         padding: 137px 20px;
     }
 
-    &-tabs-pane {
+    &-scn-title {
         max-width: 488px;
         width: 100%;
 
-        &-single {
-            .title {
-                margin-bottom: 23px;
-            }
-            .disc {
-                margin-bottom: 33px;
-            }
-
-            .slideindown {
-                transform: translateY(-100%);
-                opacity: 0;
-                transition: all .5s var(--cube-1);
-                transition-delay: 0;
-            }
+        .title {
+            margin-bottom: 23px;
         }
+        .disc {
+            margin-bottom: 33px;
+        }
+
+    }
+    &-tabs-pane {
+
+
+
 
         .tab-pane {
             &:is(.show) {
@@ -68,9 +69,6 @@
             &:not(:last-child) {
                 margin-bottom: 23px;
             }
-        }
-
-        .nav-link {
             font-family: var(--vt-body-font);
             background: transparent;
             border: none;
@@ -86,15 +84,54 @@
             transition: all .4s var(--cube-1);
 
 
+            @media #{$xl} {
+                font-size: 40px;
+            }
+
+            @media #{$lg} {
+                font-size: 35px;
+            }
+
+            @media #{$md} {
+                font-size: 30px;
+            }
+
+            @media #{$xs} {
+                font-size: 25px;
+            }
+
+            @media #{$sm} {
+                font-size: 28px;
+            }
+
             &::after {
                 content: "";
                 width: 12px;
                 height: 12px;
                 background: var(--vy-clr-black-2);
                 position: absolute;
-                top: 24px;
+                top: 25px;
                 left: 0;
                 border-radius: 50%;
+
+
+                @media #{$lg} {
+                    width: 8px;
+                    height: 8px;
+                    top: 21px;
+                }
+
+                @media #{$md} {
+                    width: 8px;
+                    height: 8px;
+                    top: 17px;
+                }
+
+                @media #{$xs} {
+                    width: 8px;
+                    height: 8px;
+                    top: 21px;
+                }
             }
 
             &:hover {
