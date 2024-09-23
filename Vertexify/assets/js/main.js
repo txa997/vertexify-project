@@ -1,6 +1,7 @@
 
 
 jQuery(window).on('load', function(){
+
 	if($('.txaa-split-text-3').length) {
 		var txasplit2 = $(".txaa-split-text-3");
 	
@@ -105,17 +106,25 @@ jQuery(window).on('load', function(){
 			loop: true,
 			spaceBetween: 0,
 			speed: 1000,
-			effect: "fade",
-			fadeEffect: {
-				crossFade: true
+
+			grabCursor: true,
+			effect: "creative",
+			creativeEffect: {
+			  prev: {
+				shadow: true,
+				translate: ["-20%", 0, -1],
+			  },
+			  next: {
+				translate: ["100%", 0, 0],
+			  },
 			},
 
 			autoplay: {
-				delay: 5000,
+				delay: 500000000,
 			},
 
 			pagination: {
-				el: ".vy-h1-pagination",
+				el: ".vy-h2-pagination",
 				clickable: true,
 			},
 
@@ -124,6 +133,10 @@ jQuery(window).on('load', function(){
 	}
 
 });
+
+
+
+
 
 // title-animation
 if($('[txaa-split-text-1]').length) {
@@ -357,10 +370,17 @@ if($('.vy-property-2-active').length) {
 		loop: true,
 		spaceBetween: 0,
 		speed: 1000,
-		// effect: "fade",
-		// fadeEffect: {
-		// 	crossFade: true
-		// },
+		grabCursor: true,
+		effect: "creative",
+		creativeEffect: {
+		  prev: {
+			shadow: false,
+			translate: ["-20%", 0, -1],
+		  },
+		  next: {
+			translate: ["100%", 0, 0],
+		  },
+		},
 
 		autoplay: {
 			delay: 5000,
@@ -386,18 +406,24 @@ if($('.vy-choose-2-img-active').length) {
 		loop: true,
 		spaceBetween: 0,
 		speed: 1000,
-		// effect: "fade",
-		// fadeEffect: {
-		// 	crossFade: true
-		// },
-
+		grabCursor: true,
+		effect: "creative",
+		creativeEffect: {
+		  prev: {
+			shadow: true,
+			translate: ["-20%", 0, -1],
+		  },
+		  next: {
+			translate: ["100%", 0, 0],
+		  },
+		},
 		autoplay: {
 			delay: 5000,
 		},
 
 		navigation: {
-			nextEl: ".vy-t2-btn-right",
-			prevEl: ".vy-t2-btn-left",
+			nextEl: ".vy-ch2-btn-right",
+			prevEl: ".vy-ch2-btn-left",
 		},
 
 		pagination: {
@@ -433,8 +459,8 @@ if($('.vy-testimonial-2-active').length) {
 		},
 
 		navigation: {
-			nextEl: ".vy-ch2-btn-right",
-			prevEl: ".vy-ch2-btn-left",
+			nextEl: ".vy-t2-btn-right",
+			prevEl: ".vy-t2-btn-left",
 		},
 
 
