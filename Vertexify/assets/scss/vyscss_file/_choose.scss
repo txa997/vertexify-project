@@ -138,6 +138,7 @@
         &-single {
             filter: grayscale(1);
             height: 100%;
+            border-radius: 16px;
         }
 
         .vy-slider-btn {
@@ -222,6 +223,13 @@
 
         video , img {
             filter: grayscale(1);
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
     }
 

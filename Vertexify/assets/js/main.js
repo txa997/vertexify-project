@@ -101,13 +101,27 @@ jQuery(window).on('load', function(){
 	}
 
 	// vy-hero-2
-	if($('.vy-h2-img-active').length) {
-		let slider = new Swiper('.vy-h2-img-active', {
-			loop: true,
-			spaceBetween: 0,
-			speed: 1000,
+	if($(".vy-h2-img-active").length) {
 
+		var swiper = new Swiper(".vy-h2-img-active-2", {
+			speed: 1000,
+			loop: true,
+			allowTouchMove: false,
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true
+			},
+	
+		});
+	
+		var swiper2 = new Swiper(".vy-h2-img-active", {
+			speed: 1000,
+			loop: true,
 			grabCursor: true,
+			autoplay: {
+				delay: 5000,
+			},
+
 			effect: "creative",
 			creativeEffect: {
 			  prev: {
@@ -118,21 +132,20 @@ jQuery(window).on('load', function(){
 				translate: ["100%", 0, 0],
 			  },
 			},
-
-			autoplay: {
-				delay: 500000000,
-			},
-
+	
 			pagination: {
 				el: ".vy-h2-pagination",
 				clickable: true,
 			},
-
-
+	
+			thumbs: {
+				swiper: swiper,
+			},
 		});
 	}
 
 });
+
 
 
 
@@ -291,6 +304,42 @@ txaascale0.forEach((box, i) => {
 	});
 })
 
+// scale
+const wascale0 = gsap.utils.toArray('.wascale0');
+wascale0.forEach((box, i) => {
+	const anim = gsap.fromTo(box, 
+		
+	{ scale: .9, duration: .3, }, 
+	{ scale: 1, duration: .3, });
+
+	ScrollTrigger.create({
+		trigger: box,
+		start: "top 95%",
+		animation: anim,
+		toggleActions: 'play none none reverse',
+		markers: false,
+
+	});
+})
+
+// translate
+const wastranslate = gsap.utils.toArray('.watranslate');
+wastranslate.forEach((box, i) => {
+	const anim = gsap.fromTo(box, 
+		
+	{ xPercent: 100, yPercent: 100, duration: .5, }, 
+	{ xPercent: 0, yPercent: 0, duration: .5, });
+
+	ScrollTrigger.create({
+		trigger: box,
+		start: "top 95%",
+		animation: anim,
+		toggleActions: 'play none none reverse',
+		markers: false,
+
+	});
+})
+
 
 // footer
 var vyf1 = gsap.timeline({
@@ -322,6 +371,20 @@ var vyvideo1 = gsap.timeline({
 vyvideo1.fromTo(".has-video-ani" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",  duration:1 }, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 })
 vyvideo1.from(".has-video-ani-elm" , { top: "-100%" ,  duration:1 }, "<=.2")
 
+// testimonial-1
+var vytesti1 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: vytesti1,
+	  trigger: '.vy-testimonial-2-pattern',
+	  start: "top 90%",
+	  end: "top 0%",
+	  toggleActions: "play none none reverse",
+	  markers: false
+	}
+});
+vytesti1.fromTo(".vy-testimonial-2-pattern" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",  duration:4 }, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:4 })
+
 // mouse-drag
 if ($(".vy-cursor").length) {
 	const cursor = document.querySelector('.vy-cursor');
@@ -345,10 +408,16 @@ if($('.vy-video-2-active').length) {
 	let slider = new Swiper('.vy-video-2-active', {
 		loop: true,
 		spaceBetween: 0,
-		speed: 1000,
-		effect: "fade",
-		fadeEffect: {
-			crossFade: true
+		speed: 2000,
+		effect: "creative",
+		creativeEffect: {
+		  prev: {
+			shadow: true,
+			translate: ["-20%", 0, -1],
+		  },
+		  next: {
+			translate: ["100%", 0, 0],
+		  },
 		},
 
 		autoplay: {
@@ -356,7 +425,7 @@ if($('.vy-video-2-active').length) {
 		},
 
 		pagination: {
-			el: ".vy-h1-pagination",
+			el: ".vy-vi2-pagi",
 			clickable: true,
 		},
 
@@ -400,7 +469,7 @@ if($('.vy-property-2-active').length) {
 	});
 }
 
-// vy-property-2
+// vy-choose-2
 if($('.vy-choose-2-img-active').length) {
 	let slider = new Swiper('.vy-choose-2-img-active', {
 		loop: true,
@@ -443,7 +512,7 @@ if($('.vy-choose-2-img-active').length) {
 	});
 }
 
-// vy-property-2
+// vy-testimonial-2
 if($('.vy-testimonial-2-active').length) {
 	let slider = new Swiper('.vy-testimonial-2-active', {
 		loop: true,
@@ -463,6 +532,39 @@ if($('.vy-testimonial-2-active').length) {
 			prevEl: ".vy-t2-btn-left",
 		},
 
+
+	});
+}
+
+// vy-pather-2
+if($('.vy-c2-patner-active').length) {
+	let slider = new Swiper('.vy-c2-patner-active', {
+		loop: true,
+		spaceBetween: 40,
+		speed: 1000,
+
+		autoplay: {
+			delay: 5000,
+		},
+
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+		},
 
 	});
 }

@@ -1,0 +1,112 @@
+/* 
+    vy-newsletter-1-start
+*/
+
+.vy-newsletter-1 {
+
+    &-row {
+        background: var(--vy-clr-pr-2);
+        padding: 49px 20px;
+    }
+    &-bg-shape {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    &-content {
+        max-width: 1145px;
+        gap: 50px;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0 0 auto;
+        width: 100%;
+        justify-content: space-between;
+
+        &-title {
+            font-size: 32px;
+            line-height: 1.18;
+            max-width: 565px;
+            width: 100%;
+            
+
+            @media #{$xs} {
+                font-size: 22px;
+            }
+
+            @media #{$sm} {
+                font-size: 26px;
+            }
+        }
+        
+    }
+
+    &-form {
+        display: flex;
+        gap: 20px 45px;
+        align-items: end;
+        max-width: 415px;
+        width: 100%;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+
+        @media #{$sm} {
+            flex-wrap: nowrap;
+        }
+
+        &-input {
+            display: block;
+            width: 100%;
+            outline: none;
+            padding: 0;
+            background: transparent;
+            border: none;
+            font-size: 16px;
+            font-family: var(--vt-body-font);
+            color: #B0B0B0;
+            border-bottom: 2px solid #4F4F4F;
+            height: 40px;
+
+            &:focus {
+                border-color: var(--vy-clr-pr-1);
+            }
+
+        }
+
+
+        &-btn {
+            flex: 0 0 auto;
+            background: transparent;
+            border: none;
+            outline: none;
+            padding: 0;
+            margin: 0;
+            font-family: var(--vt-body-font);
+            color: var(--vy-clr-pr-1);
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 18px;
+            transition: all .3s var(--cube-1);
+            margin-bottom: -5px;
+
+            i {
+                display: inline-block;
+                transition: all .3s var(--cube-1);
+            }
+
+            &:hover {
+                i {
+                    transform: translate(3px , -3px);
+                }
+            }
+        }
+    }
+}
+
+/* 
+    vy-newsletter-1-end
+*/
