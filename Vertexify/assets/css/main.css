@@ -896,7 +896,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .vy-header-1-main {
-    padding: 10px 0;
+    padding: 15px 0;
   }
 }
 .vy-header-1-main-row {
@@ -1192,8 +1192,49 @@ input:focus::placeholder, textarea:focus::placeholder {
     vy-header-2-end
 */
 /* 
+  vy-sticky-header-start
+*/
+.txa_sticky_header:is(.vy-header-1-area) {
+  top: 20px;
+  width: calc(100% - 40px);
+  left: 20px;
+}
+@media (max-width: 767px) {
+  .txa_sticky_header:is(.vy-header-1-area) {
+    width: calc(100% - 20px);
+    left: 10px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .txa_sticky_header:is(.vy-header-1-area) {
+    width: calc(100% - 40px);
+    left: 20px;
+  }
+}
+.txa_sticky_header:is(.vy-header-1-area):is(.txa_sticky):is(.txa_sticky_show) {
+  top: -39px;
+  background-color: var(--vy-clr-white-1);
+}
+.txa_sticky_header:is(.vy-header-2-area) {
+  top: 8px;
+}
+.txa_sticky_header:is(.vy-header-2-area):is(.txa_sticky):is(.txa_sticky_show) {
+  top: -39px;
+  background-color: transparent;
+}
+.txa_sticky_header:is(.vy-header-2-area):is(.txa_sticky):is(.txa_sticky_show) .vy-header-2-main {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* 
+  vy-sticky-header-end
+*/
+/* 
     h4-hero-start
 */
+.vy-multi-scn-1 {
+  position: relative;
+}
 .vy-multi-scn-1::after {
   content: "";
   width: 100%;
@@ -1205,6 +1246,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   z-index: -1;
 }
 
+.vy-hero-1-area {
+  padding-top: 204px;
+}
 .vy-hero-1-row {
   display: flex;
   gap: 85px;
@@ -1419,6 +1463,24 @@ input:focus::placeholder, textarea:focus::placeholder {
 /* 
     h5-hero-start
 */
+.vy-hero-2-area {
+  margin-top: 152px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .vy-hero-2-area {
+    margin-top: 135px;
+  }
+}
+@media (max-width: 767px) {
+  .vy-hero-2-area {
+    margin-top: 139px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .vy-hero-2-area {
+    margin-top: 135px;
+  }
+}
 .vy-hero-2-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1485,6 +1547,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .vy-hero-2-slider {
   max-width: 520px;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .vy-hero-2-slider {
