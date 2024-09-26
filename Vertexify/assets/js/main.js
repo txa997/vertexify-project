@@ -23,9 +23,9 @@ jQuery(window).on('load', function(){
 				scrollTrigger: {
 					trigger: el,
 					start: "top 90%",
-					end: "top 60%",
+					end: "top 70%",
 					markers: false,
-					scrub: 2,
+					scrub: 1,
 				},
 		
 				xPercent: 0,
@@ -143,6 +143,8 @@ jQuery(window).on('load', function(){
 			},
 		});
 	}
+	gsap.from('.vy-hero-2-img-single img', { xPercent: 100 , duration: 1 })
+
 
 });
 
@@ -568,3 +570,28 @@ if($('.vy-c2-patner-active').length) {
 
 	});
 }
+
+gsap.utils.toArray(".txxaslideup").forEach(function(container) {
+    let image = container.querySelector(".txxaslideup-item");
+  
+    let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+		  start: "top 90%",
+		  toggleActions: 'play none none reverse',
+		  markers: false,
+		  stagger: 0.3,
+        },
+      }); 
+
+      tl.from(image, {
+        yPercent: 100,
+		duration: .5,
+		stagger: 0.3,
+      }).to(image, {
+		yPercent: 0,
+		duration: .5,
+		stagger: 0.3,
+      }); 
+
+});

@@ -103,3 +103,20 @@
 /* 
     vy-footer-1-end
 */
+
+/* 
+    vy-footer-2-start
+*/
+.vy-footer-1 {
+    &-area {
+
+        &:is(.has-footer-2) {
+            background: #292929;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
+}
+/* 
+    vy-footer-2-end
+*/

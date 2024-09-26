@@ -43,6 +43,7 @@ preloader
 */
 	jQuery(window).on('load', function(){
 		jQuery('#preloader').fadeOut('slow',function(){jQuery(this).remove();});
+		
 	});
 	setTimeout(() => {
 		var a = document.querySelectorAll(".btn-spin a");
