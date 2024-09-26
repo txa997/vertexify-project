@@ -229,10 +229,6 @@
 }
 
 /* pr-btn-2 */
-
-
-
-
 .vy-pr-btn-2 {
     perspective: 2000px;
     transform-style: preserve-3d;
@@ -289,7 +285,60 @@
 	}
 }
 
+/* pr-btn-3 */
+.vy-pr-btn-3 {
+    position: relative;
+    font-family: var(--vt-body-font);
+    color: var(--vy-clr-white-1);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-size: 16px;
+    background: var(--vy-clr-gd-1);
+    border-radius: 100px;
+    padding: 15px 26px;
+    z-index: 1;
+    overflow: hidden;
+    transition: all .3s var(--cube-1);
 
+    &::before{
+        content: '';
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: var(--vy-clr-gd-1);
+        background-size: 200%;
+        filter: blur(20px);
+        opacity: 0;
+        transition: all .3s var(--cube-1);
+      }
+
+    &:hover{
+        color: var(--vy-clr-white-1);
+        transform: scale(95%);
+        &::before{
+            opacity: 1;
+            animation: animate 1s linear infinite;
+        }
+        
+    }
+      
+}
+  
+@keyframes animate
+{
+0%
+{
+    background-position: 0%;
+}
+100%
+{
+    background-position: 200%;
+}
+}
+  
 
 /* offcanvas-btn-1 */
 .vy-offcanvas-btn-1 {
