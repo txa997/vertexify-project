@@ -6,7 +6,6 @@
     z-index: 1;
     height: 560px;
     overflow: hidden;
-    filter: grayscale(1);
 
     @media #{$md} {
         height: 400px;
@@ -16,6 +15,9 @@
         height: 350px;
     }
 
+    img {
+        filter: grayscale(1);
+    }
     &-btn {
         position: absolute;
         top: 50%;

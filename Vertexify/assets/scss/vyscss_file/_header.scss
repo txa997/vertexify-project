@@ -410,9 +410,6 @@
 /* 
     vy-header-3-start
 */
-.vy-home {
-  background: #000;
-}
 
 .vy-header-3 {
   &-area {
@@ -676,13 +673,15 @@
     &:is(.txa_sticky) {
       &:is(.txa_sticky_show) {
         background-color: #000;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
         @media #{$md} {
           top: -40px;
         }
 
         @media #{$xs} {
-          top: -30px;
+          top: -40px;
         }
       }
     }

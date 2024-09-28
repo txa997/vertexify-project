@@ -312,3 +312,116 @@
 /* 
     vy-choose-2-end
 */
+
+/* 
+    vy-choose-3-start
+*/
+.vy-choose-3 {
+    &-area {
+        background: #F6F6F6;
+        border-radius: 0 0 16px 16px;
+
+        @media #{$md,$xs} {
+            padding-top: 100px;
+        }
+    }
+
+    &-row {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 50px 72px;
+        align-items: center;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr ;
+        }
+    }
+
+    &-scn-title {
+        .vy-subtitle-1 {
+            background: var(--vy-clr-white-1);
+        }
+        
+        .vy-scn-title-1 {
+            margin-bottom: 24px;
+        }
+
+        .disc {
+            margin-bottom: 31px;
+        }
+        
+        
+    }
+
+    &-img {
+        height: 900px;
+        margin-right: -350px;
+        filter: grayscale(1);
+
+        @media #{$xxxl} {
+            margin-right: -200px;
+        }
+
+        @media #{$xxl} {
+            margin-right: -100px;
+        }
+
+        @media #{$xl} {
+            margin-right: -50px;
+        }
+
+        @media #{$lg} {
+            margin-right: 0px;
+        }
+
+        @media #{$md} {
+            margin-right: 0px;
+            height: 600px;
+        }
+
+        @media #{$xs} {
+            margin-right: 0px;
+            height: 400px;
+        }
+
+        @media #{$sm} {
+            margin-right: 0px;
+            height: 500px;
+        }
+    }
+
+    &-list {
+        margin-bottom: 37px;
+
+        li {
+            font-family: var(--vt-body-font);
+            font-size: 20px;
+            color: var(--vy-clr-black-2);
+            text-transform: capitalize;
+            padding-left: 16px;
+            position: relative;
+            z-index: 1;
+        
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        
+            &::after {
+                content: "";
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: var(--vy-clr-black-2);
+                position: absolute;
+                top: 14px;
+                left: 0;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+
+/* 
+    vy-choose-3-end
+*/

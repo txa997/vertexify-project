@@ -146,6 +146,84 @@ jQuery(window).on('load', function(){
 	gsap.from('.vy-hero-2-img-single img', { xPercent: 100 , duration: 1 })
 
 
+	
+	// vy-hero-3
+	if($(".vy-h3-active").length) {
+
+		var swiper3 = new Swiper(".vy-h3-active-2", {
+			speed: 1000,
+			loop: true,
+			allowTouchMove: false,
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true
+			},
+	
+		});
+	
+		var swiper2 = new Swiper(".vy-h3-active", {
+			speed: 1000,
+			loop: true,
+			grabCursor: true,
+			autoplay: {
+				delay: 5000,
+			},
+	
+	
+			thumbs: {
+				swiper: swiper3,
+			},
+
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 2,
+				},
+				768: {
+					slidesPerView: 3,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1200: {
+					slidesPerView: 4,
+				},
+				1400: {
+					slidesPerView: 4,
+				},
+				1600: {
+					slidesPerView: 5,
+				},
+			},
+	
+		});
+	}
+	gsap.from('.vy-hero-3-content-slider .swiper-slide', { 
+		xPercent: 50, 
+		opacity: 0,    
+		duration: 1.5, 
+		stagger: 0.2, 
+		ease: "power2.out", 
+		delay: .5
+	});
+
+
+	if($('.vy-h3-blog-active').length) {
+		let slider = new Swiper('.vy-h3-blog-active', {
+			loop: true,
+			spaceBetween: 0,
+			speed: 500,
+
+			navigation: {
+				nextEl: ".vy-h3-blog-right",
+				prevEl: ".vy-h3-blog-left",
+			},
+	
+		});
+	}
+	
 });
 
 
@@ -595,3 +673,43 @@ gsap.utils.toArray(".txxaslideup").forEach(function(container) {
       }); 
 
 });
+
+// services-3-slider
+if($('.vy-s3-active').length) {
+	let slider = new Swiper('.vy-s3-active', {
+		loop: true,
+		spaceBetween: 32,
+		speed: 500,
+
+		navigation: {
+			nextEl: ".vy-s3-right",
+			prevEl: ".vy-s3-left",
+		},
+
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 3,
+			},
+			1600: {
+				slidesPerView: 4,
+			},
+		},
+
+	});
+}
