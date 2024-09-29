@@ -683,7 +683,7 @@
         .swiper-container {
             .swiper-wrapper {
                 .swiper-slide {
-                    &:is(.swiper-slide-active) {
+                    &:is(.swiper-slide-thumb-active) {
                         .vy-hero-3-content {
                             transition-delay: .5s;
                             background: rgb(0 0 0 / 20%);

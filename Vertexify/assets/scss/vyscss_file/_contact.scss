@@ -291,3 +291,97 @@
 /* 
     vy-contact-2-end
 */
+
+/* 
+    vy-contact-3-start
+*/
+.vy-contact-3 {
+    &-area {
+        background-color: #292929;
+        position: relative;
+        z-index: 2;
+        margin-top: -20px;
+        border-radius: 0 0  16px 16px;
+    }
+
+    &-row {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 50px 85px;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-scn-title {
+        max-width: 488px;
+
+        .vy-subtitle-1 {
+            color: var(--vy-clr-white-1);
+            border-color: rgb(255 255 255 / 20%);
+
+            &::after {
+                background: var(--vy-clr-white-1);
+            }
+
+            &::before {
+                background: var(--vy-clr-white-1);
+            }
+        }
+
+        .vy-scn-title-1 {
+            color: var(--vy-clr-white-1);
+            margin-bottom: 22px;
+        }
+
+        .scn-disc {
+            color: var(--vy-clr-white-1);
+            opacity: 70%;
+        }
+        
+    }
+
+    &:is(.vy-contact-2-patner-title) {
+        opacity: 64%;
+        color: var(--vy-clr-white-1);
+    }
+
+    &:is(.vt-contact-form) {
+        border-radius: 0 0 16px 16px;
+    }
+
+    &:is(.vt-contact-form-area) {
+        .contact-select {
+            span {
+                background-color: #F5F5F3;
+
+                &::before {
+                    background: var(--vy-clr-gd-1);
+                }
+
+                &:hover {
+                    border-radius: 100px;
+                    color: var(--vy-clr-white-1);
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            input:checked ~ span {
+                border-radius: 100px;
+                color: var(--vy-clr-white-1);
+            }
+        }
+        button {
+            color: var(--vy-clr-white-1);
+        }
+    }
+    
+}
+
+
+/* 
+    vy-contact-3-end
+*/

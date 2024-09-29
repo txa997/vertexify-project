@@ -16,7 +16,11 @@
         height: 580px;
         mix-blend-mode: luminosity;
         z-index: -1;
-        opacity: 50%;
+        opacity: 72%;
+
+        img {
+            object-position: top;
+        }
     }
 
     
@@ -123,4 +127,47 @@
 }
 /* 
     cta-2-end
+*/
+/* 
+    cta-3-start
+*/
+.vy-get-touch-1-area {
+    &:is(.has-ver-3) {
+        background-color: var(--vy-clr-white-1);
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        border-radius: 0 0 16px 16px;
+
+        .vy-get-touch-1-bg-img {
+            opacity: 100%;
+        }
+    }
+}
+
+.vy-get-touch-3-scn-title {
+    max-width: 510px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vy-get-touch-3-content {
+    .vt-get-in-touch-item {
+        h3 {
+            padding-bottom: 13px;
+        }
+        p {
+            opacity: 70%;
+        }
+
+        a {
+            &:hover {
+                color: var(--vy-clr-pr-3);
+                opacity: 1;
+            }
+        }
+    }
+}
+/* 
+    cta-3-end
 */

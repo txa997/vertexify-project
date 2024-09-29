@@ -195,6 +195,38 @@
     }
 }
 
+
+.vy-img-ani {
+    position: relative;
+    z-index: 1;
+
+    &-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(0);
+    }
+}
+
+.vy-cover-ani {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    align-items: end;
+  }
+  
+  .vy-cover-slice {
+    height: 100%;
+    flex-grow: 1;
+    background: #ffffff;
+  }
+
 /* 
     vy-about-3-end
 */

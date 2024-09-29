@@ -65,3 +65,47 @@
 /* 
     vy-blog-2-end
 */
+/* 
+    vy-blog-3-start
+*/
+.vy-blog-3 {
+    &-area {
+        border-radius: 0 0 16px 16px;
+        background: #292929;
+    }
+
+    &-scn-title {
+        .vy-subtitle-1 {
+            color: var(--vy-clr-white-1);
+            border-color: rgb(255 255 255 / 20%);
+
+            &::after {
+                background: var(--vy-clr-white-1);
+            }
+
+            &::before {
+                background: var(--vy-clr-white-1);
+            }
+        }
+
+        .vy-scn-title-1 {
+            color: var(--vy-clr-white-1);
+        }
+    }
+}
+
+.vy-blog-1-item {
+    &:is(.ver_2) {
+        &:is(.vy-ver-3) {
+            .blog_title {
+                color: var(--vy-clr-white-1);
+            }
+        }
+    }
+
+}
+// vt-blog-item  vy-ver-2 
+
+/* 
+    vy-blog-3-end
+*/

@@ -309,3 +309,50 @@
 /* 
     testimonial-2-end
 */
+
+/* 
+    testimonial-3-start
+*/
+.vy-testimonial-3 {
+    &-max-width {
+        max-width: 800px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &:is(.vy-testimonial-2-item) {
+        .vy-star {
+            color: #5D5D5D;
+        }
+    }
+
+    &:is(.vt-testi-slider-nav-2) {
+        .slider-btn {
+            border-radius: 50%;
+            border-color: rgb(223 225 229 / 48%);
+            color: var(--vy-clr-black-1);
+
+            &:hover {
+                border-color: var(--vy-clr-black-1);
+            }
+        }
+
+        .vt-testi-pagination-2 {
+            .swiper-pagination-total {
+                color: #888888;
+            }
+
+            .swiper-pagination-current {
+                color: var(--vy-clr-black-1);
+            }
+        }
+    }
+
+    
+
+
+}
+/* 
+    testimonial-3-end
+*/

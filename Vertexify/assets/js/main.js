@@ -150,29 +150,18 @@ jQuery(window).on('load', function(){
 	// vy-hero-3
 	if($(".vy-h3-active").length) {
 
-		var swiper3 = new Swiper(".vy-h3-active-2", {
+		var swiper3 = new Swiper(".vy-h3-active", {
 			speed: 1000,
 			loop: true,
-			allowTouchMove: false,
-			effect: "fade",
-			fadeEffect: {
-				crossFade: true
-			},
-	
-		});
-	
-		var swiper2 = new Swiper(".vy-h3-active", {
-			speed: 1000,
-			loop: true,
-			grabCursor: true,
+			
+			watchSlidesProgress: true,
+			slideToClickedSlide: true,
+
 			autoplay: {
-				delay: 5000,
+				delay: 5000000,
 			},
 	
-	
-			thumbs: {
-				swiper: swiper3,
-			},
+
 
 			breakpoints: {
 				0: {
@@ -196,6 +185,20 @@ jQuery(window).on('load', function(){
 				1600: {
 					slidesPerView: 5,
 				},
+			},
+	
+		});
+	
+		var swiper2 = new Swiper(".vy-h3-active-2", {
+			speed: 1000,
+			loop: true,
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true
+			},
+				
+			thumbs: {
+				swiper: swiper3,
 			},
 	
 		});
@@ -575,19 +578,6 @@ if($('.vy-choose-2-img-active').length) {
 			prevEl: ".vy-ch2-btn-left",
 		},
 
-		pagination: {
-			el: ".vy-t2-pagination",
-			type: 'fraction',
-			formatFractionCurrent: function (number) {
-				if (number < 10) {
-					return '0' + number;
-				} else {
-					return number;
-				}
-			}
-
-		},
-
 
 	});
 }
@@ -612,6 +602,18 @@ if($('.vy-testimonial-2-active').length) {
 			prevEl: ".vy-t2-btn-left",
 		},
 
+		pagination: {
+			el: ".vy-t2-pagination",
+			type: 'fraction',
+			formatFractionCurrent: function (number) {
+				if (number < 10) {
+					return '0' + number;
+				} else {
+					return number;
+				}
+			}
+
+		},
 
 	});
 }
@@ -713,3 +715,48 @@ if($('.vy-s3-active').length) {
 
 	});
 }
+
+
+const waascale0 = gsap.utils.toArray('.txaascale0');
+txaascale0.forEach((box, i) => {
+	const anim = gsap.fromTo(box, 
+		
+	{ scaleX: 0, duration: 1, }, 
+	{ scaleX: 1, duration: 1, });
+
+	ScrollTrigger.create({
+		trigger: box,
+		start: "top 90%",
+		animation: anim,
+		toggleActions: 'play none none reverse',
+		once: false,
+		markers: false,
+
+	});
+});
+
+
+document.querySelectorAll(".vy-cover-trigger").forEach(trigger => {
+
+	const vyct = gsap.timeline({
+	  scrollTrigger: {
+		trigger: trigger, 
+		start: "top 85%", 
+		toggleActions: "play none none reverse", 
+		markers: false 
+	  }
+	});
+  
+	vyct.to(trigger.querySelectorAll(".vy-cover-slice"), 1, { 
+	  height: 0, 
+	  ease: "power4.InOut",
+	  stagger: { amount: 0.33 } 
+	}, 'start')
+	
+	.from(trigger.querySelector(".vy-cover-slice-img"), 1.2, { 
+	  scale: 1.3, 
+	  ease: "power4.InOut"
+	}, 'start');
+
+});
+  

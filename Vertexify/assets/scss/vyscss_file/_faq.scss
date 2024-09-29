@@ -164,3 +164,46 @@
 /* 
     vy-faq-2-end
 */
+
+/* 
+    vy-faq-3-start
+*/
+.vy-faq-3 {
+
+    &-area {
+        position: relative;
+        z-index: 3;
+        background-color: var(--vy-clr-white-1);
+        border-radius: 0 0 16px 16px;
+    }
+
+    &:is(.vy-faq-1-acroding) {
+        .accordion-item {
+            .accordion-button {
+                &::after {
+                    color: var(--vy-clr-black-2);
+                    background: transparent;
+                    border: 1px solid #DFE1E5;
+                    border-radius: 50%;
+                }
+
+                &:not(.collapsed) {
+                    &::after {
+                        background: var(--vy-clr-gd-1);
+                        color: var(--vy-clr-white-1);
+                        border-color: transparent;
+                    }
+                }
+            }
+
+            &:is(.faq_active) {
+                border-color: var(--vy-clr-black-2);
+            }
+        }
+    }
+}
+
+
+/* 
+    vy-faq-3-end
+*/
