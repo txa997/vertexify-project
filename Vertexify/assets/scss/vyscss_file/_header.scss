@@ -101,7 +101,7 @@
             padding-right: 18px;
             &::before {
               content: "\f078";
-              font-family: "Font Awesome 5 Pro";
+              font-family: "Font Awesome 6 free";
               font-weight: 700;
               position: absolute;
               font-size: 12px;
@@ -309,6 +309,9 @@
       &:hover {
         i {
           color: var(--vy-clr-pr-1);
+          svg  * {
+            stroke: var(--vy-clr-pr-1);
+          }
         }
       }
     }
@@ -478,6 +481,10 @@
         color: var(--vy-clr-pr-3);
         i {
           color: var(--vy-clr-pr-3);
+
+          svg * {
+            stroke:  var(--vy-clr-pr-3);
+          }
         }
       }
     }

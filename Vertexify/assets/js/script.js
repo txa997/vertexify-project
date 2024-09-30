@@ -10,34 +10,51 @@ Last change:    00/00/00
 
 	"use strict";
 
-	const lenis = new Lenis({
-		duration: .5, 
-		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-		direction: 'vertical', 
-		smooth: true, 
-		smoothTouch: false, 
-	  });
-	  
-	  function raf(time) {
-		lenis.raf(time);
-		requestAnimationFrame(raf);
-	  }
-	  
-	  requestAnimationFrame(raf);
-	  $('a[href^="#"]').on('click', function (e) {
-		e.preventDefault(); 
-	  
-		const target = $(this.getAttribute('href')); 
-	  
-		if (target.length) {
-		  lenis.scrollTo(target[0], {
-			duration: 1.2, 
-			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-		  });
-		}
-	  });
+	
+const lenis = new Lenis({
+	duration: 0.5,
+	easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+	direction: 'vertical',
+	smooth: true,
+	smoothTouch: false,
+  });
 
-	/*
+  function raf(time) {
+	lenis.raf(time);
+	requestAnimationFrame(raf);
+  }
+  
+  requestAnimationFrame(raf);
+
+  // Smooth scrolling for anchor links
+  $('a[href^="#"]').on('click', function (e) {
+	e.preventDefault();
+  
+	const target = $(this.getAttribute('href'));
+  
+	if (target.length) {
+	  lenis.scrollTo(target[0], {
+		duration: 1.2,
+		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+	  });
+	}
+  });
+	const target = document.querySelector('.vt-service-section-2');
+	if (target) {
+		const observer = new IntersectionObserver(function (entries) {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+			lenis.scrollTo(entry.target, {
+				duration: 1,
+				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+			});
+			}
+		});
+		}, { threshold: 0.1 });
+
+		observer.observe(target);
+	} 
+/*
 preloader
 ====start====
 */
@@ -239,10 +256,10 @@ Service Slider
 	var swiper2 = new Swiper(".vt-service-thumb", {
 		spaceBetween: 0,
 		slidesPerView: 6,
-		freeMode: true,
+		freeMode: false,
 		direction: 'vertical',
 		mousewheel: true,
-		speed: 1000,
+		speed: 500,
 		pagination: {
 			el: ".vt-service-pagination",
 			clickable: true,
@@ -256,7 +273,7 @@ Service Slider
 			releaseOnEdges: true,
 		},
 		effect: 'fade',
-		speed: 1000,
+		speed: 500,
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",

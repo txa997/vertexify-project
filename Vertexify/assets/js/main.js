@@ -202,6 +202,10 @@ jQuery(window).on('load', function(){
 			},
 	
 		});
+
+
+
+
 	}
 	gsap.from('.vy-hero-3-content-slider .swiper-slide', { 
 		xPercent: 50, 
@@ -228,9 +232,6 @@ jQuery(window).on('load', function(){
 	}
 	
 });
-
-
-
 
 
 
@@ -423,6 +424,21 @@ wastranslate.forEach((box, i) => {
 	});
 })
 
+
+if($('.vt-service-section-2').length) {
+	const fxnoscrollcontent = document.querySelector('.vt-service-section-2');
+	const fxh5 = document.body;
+	
+	fxnoscrollcontent.addEventListener('mouseenter', function() {
+	
+		fxh5.classList.add('lenis');
+	});
+	fxnoscrollcontent.addEventListener('mouseleave', function() {
+	
+		fxh5.classList.remove('lenis');
+	
+	});
+}
 
 // footer
 var vyf1 = gsap.timeline({
@@ -759,4 +775,8 @@ document.querySelectorAll(".vy-cover-trigger").forEach(trigger => {
 	}, 'start');
 
 });
-  
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})

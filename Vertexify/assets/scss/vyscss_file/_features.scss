@@ -69,75 +69,82 @@
             &:not(:last-child) {
                 margin-bottom: 23px;
             }
-            font-family: var(--vt-body-font);
-            background: transparent;
-            border: none;
-            outline: none;
-            text-transform: capitalize;
-            font-size: 45px;
-            line-height: 1.3;
-            color: var(--vy-clr-black-2);
-            opacity: 40%;
-            padding-left: 20px;
-            position: relative;
-            z-index: 1;
-            transition: all .4s var(--cube-1);
+            a {
+                font-family: var(--vt-body-font);
+                background: transparent;
+                border: none;
+                outline: none;
+                text-transform: capitalize;
+                font-size: 45px;
+                line-height: 1.3;
+                color: var(--vy-clr-black-2);
+                opacity: 40%;
+                padding-left: 20px;
+                position: relative;
+                z-index: 1;
+                transition: all .4s var(--cube-1);
 
-
-            @media #{$xl} {
-                font-size: 40px;
-            }
-
-            @media #{$lg} {
-                font-size: 35px;
-            }
-
-            @media #{$md} {
-                font-size: 30px;
-            }
-
-            @media #{$xs} {
-                font-size: 25px;
-            }
-
-            @media #{$sm} {
-                font-size: 28px;
-            }
-
-            &::after {
-                content: "";
-                width: 12px;
-                height: 12px;
-                background: var(--vy-clr-black-2);
-                position: absolute;
-                top: 25px;
-                left: 0;
-                border-radius: 50%;
-
-
+                @media #{$xl} {
+                    font-size: 40px;
+                }
+    
                 @media #{$lg} {
-                    width: 8px;
-                    height: 8px;
-                    top: 21px;
+                    font-size: 35px;
                 }
-
+    
                 @media #{$md} {
-                    width: 8px;
-                    height: 8px;
-                    top: 17px;
+                    font-size: 30px;
                 }
-
+    
                 @media #{$xs} {
-                    width: 8px;
-                    height: 8px;
-                    top: 21px;
+                    font-size: 25px;
+                }
+    
+                @media #{$sm} {
+                    font-size: 28px;
+                }
+
+                &::after {
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+                    background: var(--vy-clr-black-2);
+                    position: absolute;
+                    top: 25px;
+                    left: 0;
+                    border-radius: 50%;
+    
+    
+                    @media #{$lg} {
+                        width: 8px;
+                        height: 8px;
+                        top: 21px;
+                    }
+    
+                    @media #{$md} {
+                        width: 8px;
+                        height: 8px;
+                        top: 17px;
+                    }
+    
+                    @media #{$xs} {
+                        width: 8px;
+                        height: 8px;
+                        top: 21px;
+                    }
+                }
+    
+                &:hover {
+                    opacity: 1;
+                    -webkit-text-stroke: .5px;
                 }
             }
 
-            &:hover {
-                opacity: 1;
-                -webkit-text-stroke: .5px;
-            }
+
+
+            
+
+           
         }
     }
 }

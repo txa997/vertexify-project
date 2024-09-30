@@ -514,6 +514,7 @@
         padding-top: 325px;
         background: transparent;
         transition: all .4s var(--cube-1);
+        cursor: pointer;
 
         @media #{$xs} {
             padding-top: 210px;
@@ -619,6 +620,14 @@
             }
         }
         
+
+        &:hover {
+            background: rgb(0 0 0 / 20%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+
+        }
     }
 
     &-img {
